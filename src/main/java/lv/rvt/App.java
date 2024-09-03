@@ -7,8 +7,13 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.printIn("Hello world!");
+        // My code starts here
+        String name = "Maksims";
+        int age = 16;
+        boolean isOnline = false;
 
+        System.out.printIn(age);
+        // Code ends
     }
 
 }
