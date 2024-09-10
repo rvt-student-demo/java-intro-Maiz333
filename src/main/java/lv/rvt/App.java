@@ -1,19 +1,23 @@
+
 package lv.rvt;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-
-public class App 
+import java.util.Scanner;
+public class App
 {
-    public static void main( String[] args )
+    public static void main(String[] args)
     {
-        // My code starts here
-        String name = "Maksims";
-        int age = 16;
-        boolean isOnline = false;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ievadi savu vārdu: ");
+        String name = scanner.nextLine();
 
-        System.out.printIn(age);
-        // Code ends
+        System.out.println("Ievadi savu uzvārdu: ");
+        String lastname = scanner.nextLine();
+
+        System.out.println("Ievadi savu grupu: ");
+        String group = scanner.nextLine();
+
+        System.out.println(name+" "+lastname+" "+group);
     }
-
 }
