@@ -14,11 +14,20 @@ public class Decreasingcounter {
         value=0;
         }
     
-    public void decrement() {
-        if(value>0){
-        value=value-1;
+    public void increase(int increaseBy){
+            this.value+=increaseBy;
+        }
+    public void decrease(int decreaseBy){
+        if((this.value-decreaseBy)>0){
+            this.value-=decreaseBy;
+        }
+        else{
+            this.value=0;
         }
     }
 
+    public String toString(int value){
+        return this.value;
+    }
 }
 

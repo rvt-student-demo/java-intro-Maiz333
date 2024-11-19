@@ -7,7 +7,7 @@ public class MainProgram {
         statistics.addNumber(5);
         statistics.addNumber(1);
         statistics.addNumber(2);
-        System.out.println("Count: " + statistics.getCount());  // Expected output: Count: 4
+        System.out.println("Count: " + statistics.getCount());  
     }
 }
 

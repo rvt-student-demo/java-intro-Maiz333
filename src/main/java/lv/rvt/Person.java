@@ -12,6 +12,7 @@ public class Person {
         this.age = 0;
         this.weight = 0;
         this.height = 0;
+        this.age = age;
 
     }
     public void growOlder(){
@@ -24,26 +25,24 @@ public class Person {
     }
     public String getName(){
         return this.
-        group;
+        name;
     }
     public void setGroup(String group){
         this.name = name;
     }
-    public void printPerson(){
-        System.out.println(this.name+ ", age"+ this.age+ " year");
+    public String toString(){
+        return this.name + ", BMI: " + this.bodyMassIndex()
+            + ", maximum heart rate: " + this.maximumHeartRate();
     }
-    public void setHeight(int newHeight) {
-        this.height = newHeight;
+    public void printPerson(){
+        System.out.println(this.name+ ", age"+ this.age+ " years");
     }
 
-    public void setWeight(int newWeight) {
-        this.weight = newWeight;
-    }
-    public String toString() {
-        return this.name + ", age " + this.age + " years, my body mass index is " + this.bodyMassIndex();
     }
     public double bodyMassIndex() {
-        double heigthPerHundred = this.height / 100.0;
-        return this.weight / (heigthPerHundred * heigthPerHundred);
+        return this.weight / (this.height * this.height);
     }
-}
+    public double maximumHeartRate(){
+    return 206.3 - (0.711 * this.age);
+
+    }
