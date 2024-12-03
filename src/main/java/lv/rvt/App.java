@@ -1,19 +1,22 @@
 
 package lv.rvt;
-
 import java.io.BufferedReader;
 import java.util.*;
 
 public class App {
-        public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
-                BufferedReader reader = Helper.getReader(filename:"persons.csv");
+        ArrayList<Person> persons = PersonManager.getPersonList();
 
-                reader.readLine();
-                String line;
+        Product tapeMeasure = new Product("Tape measure");
+        Product plaster = new Product("Plaster", "home improvement section");
+        Product tyre = new Product("Tyre", 5);
 
-                while ((line = reader.readLine()) != null) {
-                        System.out.println(line);
-                }
+        System.out.println(tapeMeasure);
+        System.out.println(plaster);
+        System.out.println(tyre);
+        for (Person person : persons) {
+            System.out.println(person);
         }
+    }
 }
