@@ -5,14 +5,13 @@ public class Person {
     private int weight;
     private int height;
     private int shelf;
-    // All args class constructor
+    
     public Person(String name, int age, int weight, int height) {
         this.age = age;
         this.weight = weight;
         this.height = height;
         this.name = name;
     }
-    // Second constructor with only one parameter
     public Person(String name) {
         this(name, 0, 0, 0);
     }
@@ -27,7 +26,6 @@ public class Person {
     public boolean isOfLegalAge() {
         return this.age <= 18;
     }
-    // Getter un setter
     public String getName() {
         return this.name;
     }

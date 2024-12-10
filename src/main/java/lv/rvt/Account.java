@@ -10,8 +10,7 @@ public class Account {
         this.balance = this.balance + amount;
     }
 
-    public void withdraw(double 
- amount) {
+    public void withdraw(double amount) {
     public void withdraw(double amount) {
         this.balance = this.balance - amount;
     }
