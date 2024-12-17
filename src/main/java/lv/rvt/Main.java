@@ -1,34 +1,24 @@
-package lv.rvt;
-import java.util.Scanner;
-
 public class Main {
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        Statistics totalStatistics = new Statistics();
-        Statistics evenStatistics = new Statistics();
-        Statistics oddStatistics = new Statistics();
 
-        System.out.println("Enter numbers:");
+        PaymentTerminal unicafeExactum = new PaymentTerminal();
+        System.out.println(unicafeExactum);
 
-        while (true) {
-            int number = scanner.nextInt();
-            if (number == -1) {
-                break;
-            }
-    
-            totalStatistics.addNumber(number);
-            
-            if (number % 2 == 0) {
-                evenStatistics.addNumber(number);
-            } else {
-                oddStatistics.addNumber(number);
-            }
-        }
+        PaymentCard annesCard = new PaymentCard(2);
 
+        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
 
-        System.out.println("Sum: " + totalStatistics.sum());
-        System.out.println("Sum of even numbers: " + evenStatistics.sum());
-        System.out.println("Sum of odd numbers: " + oddStatistics.sum());
+        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        System.out.println("there was enough money: " + wasSuccessful);
+
+        unicafeExactum.addMoneyToCard(annesCard, 100);
+
+        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        System.out.println("there was enough money: " + wasSuccessful);
+
+        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
+
+        System.out.println(unicafeExactum);
     }
 }
