@@ -1,24 +1,13 @@
 public class Main {
 
     public static void main(String[] args) {
+        // you can write code here to try out your program
+        Apartment manhattanStudioApt = new Apartment(1, 20, 1000);
+        Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
+        Apartment bangorThreeBedroomApt = new Apartment(2, 23, 1500);
 
-        PaymentTerminal unicafeExactum = new PaymentTerminal();
-        System.out.println(unicafeExactum);
+        System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));
+        System.out.println(manhattanStudioApt.moreExpensiveThan(bangorThreeBedroomApt));
 
-        PaymentCard annesCard = new PaymentCard(2);
-
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        unicafeExactum.addMoneyToCard(annesCard, 100);
-
-        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        System.out.println(unicafeExactum);
     }
 }

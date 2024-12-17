@@ -1,3 +1,4 @@
+package lv.rvt;
 public class PaymentCard {
 
     private double balance;
